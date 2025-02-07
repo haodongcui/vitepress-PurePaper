@@ -1,0 +1,9 @@
+#live2d {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    width: 300px;
+    height: auto;
+    pointer-events: none; /* 防止模型遮挡其他操作 */
+  }

@@ -1,0 +1,29 @@
+/* 隐藏文件夹与文件 */
+/* div[data-path="node_modules"] {
+    display: none;
+}
+div[data-path="package.json"] {
+    display: none;
+}
+div[data-path="pnpm-lock.yaml"] {
+    display: none;
+} */
+
+
+/* div[data-path="blog-info"] {
+    display: none;
+} */
+
+/* div[data-path="README.md"] {
+    display: none;
+} */
+
+/* 隐藏所有 README.md 文件 */
+div[data-path*="README.md"] {
+    display: none;
+}
+
+/* 隐藏所有 public 文件夹 */
+div[data-path*="public"] {
+    display: none;
+}
