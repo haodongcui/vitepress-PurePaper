@@ -1,7 +1,7 @@
 
 ## vitepress-blog-origin
 
-[vitepress-blog-origin](https://github.com/haodongcui/vitepress-blog-origin), 一个简洁但漂亮的 vitepress 博客, 由 [haodongcui](https://github.com/haodongcui) 开发.
+[vitepress-blog-origin](https://github.com/haodongcui/vitepress-blog-origin), 一个简洁且漂亮的 vitepress 博客, 由 [haodongcui](https://github.com/haodongcui) 开发.
 
 ![preview of dark mode](./preview2025-2-8.png)
 
