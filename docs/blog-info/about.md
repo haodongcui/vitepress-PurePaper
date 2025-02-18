@@ -1,14 +1,8 @@
 ---
-title: about
+title: 关于我
+sidebar: false
 ---
 
+HaoDong Cui
 
 **以兴趣为导向，喜欢探索并折腾各种新事物。**
-
->[!NOTE]
-    目前的兴趣点：
-    - 数学
-    - 人工智能
-    - 阅读
-    - 前端
-    - 其他的折腾

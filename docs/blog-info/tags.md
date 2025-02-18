@@ -1,7 +1,7 @@
 ---
-layout: home
+layout: page
 title: tags
-# sidebar: false
+sidebar: false
 ---
 
 <Tags/>

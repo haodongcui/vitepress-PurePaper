@@ -1,12 +1,14 @@
 ---
-title: nav
+title: 导航
+sidebar: false
 ---
 
 常用网站
 - [ChatGPT](https://chatgpt.com/)
 - [GitHub](https://github.com/)
 - [DeepSeek](https://chat.deepseek.com/)
-
+- [http://202.201.252.10/（新大校园网登录地址ip）](http://202.201.252.10/)
+- [[力扣刷题攻略] Re：从零开始的力扣刷题生活 - 力扣（LeetCode）](https://leetcode.cn/circle/discuss/E3yavq/#%E6%95%B0%E7%BB%84%E7%AF%87)
 
 小工具
 - [Emoji大全](https://www.emojiall.com/zh-hans)
@@ -15,7 +17,17 @@ title: nav
 
 
 
+站长
+- [京东云服务器控制台](https://lavm-console.jdcloud.com/lavm/list)
+- [京东云域名管理](https://net-console.jdcloud.com/domain/index)
+- [宝塔面板](https://cuihd.com:9999)
+- [alist网盘](http://cuihd.com:5244)
+
+
 vitepress 相关
 - [vitepress 插件汇总](https://vitepress.yiov.top/plugin.html)
 - [vitepress 官方文档](https://vitepress.dev/zh/guide/what-is-vitepress)
 
+
+其他网站
+- [备考冲刺](https://britishcouncil.gelielts.cn/)

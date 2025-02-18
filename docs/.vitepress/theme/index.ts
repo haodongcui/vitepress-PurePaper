@@ -7,22 +7,26 @@ import { useData, useRoute } from 'vitepress';
 import { inBrowser } from 'vitepress'
 
 // 自定义组件
-import beian from './components/bottom-beian.vue'   // 备案信息
-import giscusTalk from 'vitepress-plugin-comment-with-giscus'; // giscus评论
+import BeiAn from './components/BeiAn.vue'   // 备案信息
+import Confetti from "./components/Confetti.vue"    // 五彩纸屑
+import BackToTop from "./components/BackToTop.vue"  // 返回顶部
+import ViewTrans from "./components/ViewTrans.vue"  // 视觉过渡
+import DocHeader from "./components/DocHeader.vue"  // 文档头部
+
 import busuanzi from 'busuanzi.pure.js'             // 不蒜子
-import bsz from "./components/bottom-bsz.vue"       // 不蒜子
-import confetti from "./components/confetti.vue"    // 五彩纸屑
-import MyLayout from './components/MyLayout.vue';
-// import backtotop from "./components/backtotop.vue"  // 返回顶部
+import Bsz from "./components/BuSuanZi.vue"       // 不蒜子
+import giscusTalk from 'vitepress-plugin-comment-with-giscus'; // giscus评论
+
 
 // 自定义布局
-import PostList from './layouts/PostList.vue'
+import MyLayout from './layouts/MyLayout.vue';
+import PostsList from './layouts/PostsList.vue'
+import CategoriesList from './layouts/CategoriesList.vue'
 import Categories from './layouts/Categories.vue'
+import TagsList from './layouts/TagsList.vue'
 import Tags from './layouts/Tags.vue'
-// Live2d-Widget
-// import { loadlive2d } from 'live2d-widget';
-// import Live2D from "./components/Live2D.vue"
-// import loadLive2D from "./components/LoadLive2D.vue"
+import Posts from './layouts/Posts.vue'
+import PostsNav from './layouts/PostsNav.vue'
 
 export default {
   // extends: DefaultTheme,
@@ -30,28 +34,33 @@ export default {
     // return h(DefaultTheme.Layout, null, {
     return h(MyLayout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-
-      'layout-bottom': () => [ h(bsz), h(beian) ], //不蒜子layout-bottom插槽
-      // 'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
+      'doc-before': () => [h(DocHeader)],
+      'layout-bottom': () => [h(Bsz), h(BeiAn)], // layout-bottom插槽
+      // 'doc-footer-before': () => h(BackToTop), // doc-footer-before插槽
     })
   },
 
 
   async enhanceApp({ app, router, siteData }) {
     // 注册全局组件
-    app.component('confetti' , confetti);
-    app.component('PostList', PostList);
+    app.component('Confetti', Confetti);
+    app.component('BackToTop', BackToTop);
+    app.component('PostsList', PostsList);
+    app.component('CategoriesList', CategoriesList);
     app.component('Categories', Categories);
+    app.component('TagsList', TagsList);
     app.component('Tags', Tags)
-    // app.component('Live2D', Live2D)
+    app.component('PostsNav', PostsNav)
+    app.component('Posts', Posts)
+    app.component('ViewTrans', ViewTrans)
+    app.component('DocHeader', DocHeader)
 
     // 不蒜子
     if (inBrowser) {
-      router.onAfterRouteChanged = () => {
+      router.onAfterRouteChange = () => {
         busuanzi.fetch()
       }
     };
-
 
   },
 
@@ -69,7 +78,7 @@ export default {
       mapping: 'pathname',
       inputPosition: 'bottom',
       lang: 'zh-CN',
-      }, 
+    },
       {
         frontmatter, route
       },

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 
 const { isDark } = useData()
@@ -40,9 +39,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
-  <DefaultTheme.Layout>
-    <!-- 这里可以插入其他插槽组件 -->
-  </DefaultTheme.Layout>
+  <slot />
 </template>
 
 <style>

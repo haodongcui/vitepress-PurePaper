@@ -1,4 +1,4 @@
 <template>
     <PostsNav />
-    <TagsList />
+    <PostsList />
 </template>

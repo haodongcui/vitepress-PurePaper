@@ -1,6 +1,6 @@
 ---
 layout: page
-title: index-post
+title: categories
 # sidebar: "/blog-posts"
 sidebar: false
 ---

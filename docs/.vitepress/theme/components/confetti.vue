@@ -13,3 +13,4 @@ confetti({
 
 }
 </script>
+<template></template>

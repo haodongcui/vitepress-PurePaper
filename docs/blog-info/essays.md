@@ -1,10 +1,11 @@
 ---
 layout: page
-title: index-essay
-sidebar: "/blog-posts"
+title: essay
+sidebar: false
+# sidebar: "/blog-posts"
 ---
 
-<script setup>
+<!-- <script setup>
 import { computed } from 'vue'
 import  { data }  from '../.vitepress/theme/data/essay.data'
 
@@ -28,4 +29,4 @@ const computedYearMap = computed(()=> {
         </div>
     </div>
   </div>
-</div>
+</div> -->

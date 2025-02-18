@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { data as posts } from './post.data.ts'
+import { data as posts } from '../data/post.data.ts'
+// console.log(posts)
 
 
 // 当前页数
@@ -55,6 +56,9 @@ const prevPage = () => {
 //   return date
 // }
 
+
+
+
 </script>
 
 
@@ -73,9 +77,9 @@ const prevPage = () => {
     <div class='post-list-item-info'>
         <a class="post-list-item-author">{{ post.frontmatter.author }}</a>
         <time class='post-list-item-date' v-if="post.frontmatter.date">{{ post.frontmatter.date }}</time>
-        <span class='post-list-item-categories' v-if="post.frontmatter.categories && post.frontmatter.categories.length">
+        <!-- <span class='post-list-item-categories' v-if="post.frontmatter.categories && post.frontmatter.categories.length">
             <a class='post-list-item-category' v-for="item in post.frontmatter.category" :key="item" >{{ item }}</a>
-        </span>
+        </span> -->
         <span class='post-list-item-tags' v-if="post.frontmatter.tags && post.frontmatter.tags.length">
             <a class='post-list-item-tag' v-for="item in post.frontmatter.tags" :key="item" >{{ item }}</a>
         </span>
@@ -91,6 +95,7 @@ const prevPage = () => {
   <button @click="nextPage" :disabled="currentPage === totalPages" class="page-witch-next">Next</button>
 </div>
 
+<!-- <BackToTop /> -->
 </template>
   
 
@@ -101,14 +106,14 @@ const prevPage = () => {
 <!-- ---------------------------------- -->
 <!-- ------------ CSS 样式 ------------ -->
 <!-- ---------------------------------- -->
-<style>
+<style scoped>
 
 .post-list-container {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    max-width: 80ch;
+    max-width: 90ch;
 }
 
 /* 媒体查询：小屏幕设备 */
@@ -193,32 +198,6 @@ const prevPage = () => {
     /* display: block; */
     margin-bottom: 10px;
 }
-
-/* .post-list-item-categories {
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.post-list-item-category {
-    font-size: 0.9em;
-    color: var(--my-font-color);
-    text-decoration: none;
-    margin-right: 5px;
-
-    border: 1px solid var(--my-border-color);
-    background-color: var(--my-highlight-color-2);
-    padding: 2px 5px;
-    border-radius: 3px;
-
-    transition:
-        box-shadow 0.2s ease,
-        text-decoration 0.3s ease;
-}
-
-.post-list-item-category:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-} */
 
 .post-list-item-tags {
     display: inline-block;
