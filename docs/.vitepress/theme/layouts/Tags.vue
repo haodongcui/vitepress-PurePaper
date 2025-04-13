@@ -1,0 +1,4 @@
+<template>
+    <PostsNav />
+    <TagsList />
+</template>

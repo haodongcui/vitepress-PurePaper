@@ -1,0 +1,4 @@
+<template>
+    <PostsNav />
+    <CategoriesList />
+</template>
