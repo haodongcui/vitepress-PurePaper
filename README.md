@@ -1,9 +1,9 @@
-## vitepress-blog-ob
+## vitepress-pure-blog
 
-- [repo](https://github.com/haodongcui/vitepress-blog-ob)
-- [demo](https://haodongcui.github.io)
+- [repo](https://github.com/haodongcui/vitepress-pure-blog)
+- [demo](https://haodongcui.github.io/blog)
 
-[vitepress-blog-origin](https://github.com/haodongcui/vitepress-blog-ob), 自制的一个简洁且漂亮的 vitepress 博客.
+[vitepress-blog-origin](https://github.com/haodongcui/vitepress-pure-blog), 自制的一个简洁且漂亮的 vitepress 博客.
 
 ![preview of dark mode](./preview2025-2-8.png)
 
